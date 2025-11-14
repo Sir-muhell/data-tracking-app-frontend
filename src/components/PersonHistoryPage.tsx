@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, useNavigate, Navigate, Link } from "react-router-dom";
+import { useParams, useNavigate, Navigate } from "react-router-dom";
 import type { AppDispatch, RootState } from "../app/store";
 import { fetchReportsByPersonId } from "../api/personsService";
 import type { IWeeklyReport } from "../types";

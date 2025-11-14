@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import {
   ChevronDown,
@@ -10,18 +10,18 @@ import {
   FileText,
   Search, // <-- IMPORT SEARCH ICON
 } from "lucide-react";
-import type { AppDispatch, RootState } from "../app/store";
+import type { RootState } from "../app/store";
 import {
   getUsersWithPeopleRecords,
   fetchPeopleByUserAdmin,
 } from "../api/personsService";
-import { logout } from "../features/auth/authSlice";
+// import { logout } from "../features/auth/authSlice";
 import type { IPerson, IAuthUser } from "../types";
 import Navbar from "../components/Navbar";
 
 const AdminReports: React.FC = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch<AppDispatch>();
+  //   const dispatch = useDispatch<AppDispatch>();
   const { user } = useSelector((state: RootState) => state.auth);
 
   // State for Step 1: List of users who have created records
@@ -62,10 +62,10 @@ const AdminReports: React.FC = () => {
 
   // --- Handlers ---
 
-  const handleLogout = () => {
-    dispatch(logout());
-    navigate("/login");
-  };
+  //   const handleLogout = () => {
+  //     dispatch(logout());
+  //     navigate("/login");
+  //   };
 
   const handleViewHistory = useCallback(
     (personId: string) => {
@@ -173,8 +173,8 @@ const AdminReports: React.FC = () => {
       "flex justify-between items-center w-full p-5 text-left transition duration-200 hover:bg-indigo-50/50 dark:hover:bg-gray-700/50 rounded-xl";
     const userTitleClasses =
       "text-lg font-bold text-gray-800 dark:text-gray-100";
-    const userRoleClasses =
-      "text-sm font-medium text-indigo-400 dark:text-indigo-300";
+    // const userRoleClasses =
+    //   "text-sm font-medium text-indigo-400 dark:text-indigo-300";
     const collapseTextClasses =
       "text-sm text-gray-500 dark:text-gray-400 font-medium";
     const expandedContentClasses =

@@ -24,12 +24,12 @@ import {
 
 const Dashboard: React.FC = () => {
   // Use `alert()` as a custom modal for now since we cannot use the native window.alert()
-  const customAlert = (message: string) => {
-    // This function mimics an alert without using the browser's native alert()
-    console.log(`Custom Alert: ${message}`);
-    // In a real app, this would trigger a visible toast or modal component
-    // For now, we rely on the console log for testing the click handler.
-  };
+  //   const customAlert = (message: string) => {
+  //     // This function mimics an alert without using the browser's native alert()
+  //     console.log(`Custom Alert: ${message}`);
+  //     // In a real app, this would trigger a visible toast or modal component
+  //     // For now, we rely on the console log for testing the click handler.
+  //   };
 
   const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
@@ -91,11 +91,7 @@ const Dashboard: React.FC = () => {
   }, [persons, searchQuery]);
 
   // --- Handlers ---
-  const handleLogout = () => {
-    dispatch(logout());
-    navigate("/login");
-  };
-
+  //
   const openReportModal = (person: IPerson) => {
     setSelectedPerson(person);
     setIsModalOpen(true);

@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
-import { BookOpen, LogOut, User as UserIcon, Home } from "lucide-react";
+import { LogOut, User as UserIcon, Home } from "lucide-react";
 // import ThemeToggle from "./Theme";
 import { logout } from "../features/auth/authSlice";
 import type { AppDispatch, RootState } from "../app/store";

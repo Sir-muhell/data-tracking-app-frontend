@@ -1,5 +1,5 @@
 import axiosInstance from "./axiosInstance";
-import type { ILoginResponse, IAuthUser } from "../types";
+import type { ILoginResponse } from "../types";
 
 // Type for the login/register payload
 interface IAuthPayload {

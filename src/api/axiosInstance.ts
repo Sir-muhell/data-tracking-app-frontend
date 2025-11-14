@@ -2,7 +2,7 @@ import axios from "axios";
 import type { RootState } from "../app/store";
 
 // Define the base URL for your backend API
-const BASE_URL = "http://localhost:5001/api"; // Use 5001 or whatever port you settled on
+const BASE_URL = "https://data-tracking-app-backend.onrender.com/api"; // Use 5001 or whatever port you settled on
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
